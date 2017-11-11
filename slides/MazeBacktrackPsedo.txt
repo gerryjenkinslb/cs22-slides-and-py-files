@@ -1,0 +1,21 @@
+solve( position):
+    if position is out of maze:
+       return solved
+    for each new position in the four directions:
+        if (can we move there and we have not been there before):
+            if solve( new position) is solved:
+                return solved
+    return not solved
+
+
+Generalized problem:
+
+solve(state):
+    if state is solution:
+        return true
+    for each valid transition to new state:
+        if solve(new state):
+            return true
+    return false
+            
+    
